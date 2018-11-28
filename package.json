@@ -1,0 +1,11 @@
+{
+  "name": "directory-arca",
+  "version": "1.0.0",
+  "description": "Arca Directory",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matt, David, Wada",
+  "license": "ISC"
+}
