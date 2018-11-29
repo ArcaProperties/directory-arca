@@ -1,5 +1,6 @@
 import React from 'react';
 import HomesList from './HomesList.jsx'
+import Route from './Route.jsx';
 
 class App extends React.Component {
   constructor(props){
@@ -29,6 +30,7 @@ class App extends React.Component {
       <div>
         current home: { this.state.home }
         <HomesList list={ this.state.listOfHomes} selectHome={ this.handleClick }/>
+        <Route />
       </div>
     )
   }
