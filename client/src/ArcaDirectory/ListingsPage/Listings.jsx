@@ -96,7 +96,7 @@ class Listings extends React.Component {
               </div>
             ),
             //later link this to the product page
-            url:data.listing_url
+            url:"localhost:7777/#/product"
           })}
 
           react={{

@@ -1,24 +1,31 @@
 import React from 'react';
 import styles from './Navbar.css';
+import { Redirect } from 'react-router'
 import { ReactiveBase, DataSearch} from '@appbaseio/reactivesearch'
 
 class Navbar extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      searchKeyword: ''
+      searchKeyword: '',
+      redirect: false
     }
-    this.handleSearch = this.handleSearch.bind(this);
   }
 
   handleSearch(query) {
     console.log('handleSearch: ', query);
     this.setState({
-      searchKeyword: query
+      searchKeyword: query,
+      redirect: true
     })
   }
 
   render() {
+
+    if (this.state.redirect) {
+      return <Redirect to='/listings'/>;
+    } 
+ 
     return(
       <nav className="nav">
         <div className="title"> ArcaSearch </div>
@@ -30,12 +37,7 @@ class Navbar extends React.Component {
           URLParams={true}
           iconPosition="left"
           className="search"
-          onValueSelected={
-            function(value, cause, source) {
-              console.log("current value: ", this)
-              this.handleSearch(value);
-            }
-          }
+          onValueSelected={ (value, cause, source) => this.handleSearch(value)}
         />
       </nav>
     )
