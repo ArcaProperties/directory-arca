@@ -1,0 +1,6 @@
+:local .Navbar {
+  border: 1px solid black;
+  padding: 5vw;
+  margin: 0 0 2vh;
+  text-align: center;
+}
