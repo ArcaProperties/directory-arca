@@ -1,4 +1,7 @@
 import React from 'react';
+import Navbar from '../Navbar.jsx';
+import Main from './components/Main.jsx';
+import Footer from '../Footer.jsx';
 
 class Landing extends React.Component {
   constructor(props) {
@@ -11,7 +14,9 @@ class Landing extends React.Component {
   render() {
     return(
       <div>
-        Landing Page.
+        <Navbar />
+        <Main />
+        <Footer />
       </div>
     )
   }
