@@ -10,7 +10,10 @@ var HomesList = ({ list, selectHome }) => {
           <Home selectHome={selectHome} home={home} />
         )
       }
+      Random Test for Git push
+
       Here is a random file change.
+
     </div>
   )
 }
