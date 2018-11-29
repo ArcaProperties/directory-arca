@@ -1,4 +1,8 @@
 import React from 'react';
+import Navbar from '../Navbar.jsx';
+import Main from './components/Main.jsx';
+import Footer from '../Footer.jsx';
+import { ReactiveBase, DataSearch} from '@appbaseio/reactivesearch'
 
 class Landing extends React.Component {
   constructor(props) {
@@ -11,7 +15,19 @@ class Landing extends React.Component {
   render() {
     return(
       <div>
-        Landing Page.
+        <ReactiveBase
+          app="arca-housing-list"
+          credentials="gyt60WE3T:18fa7784-3c3b-45e5-a1c5-f54b2696506a"
+          type="listing"
+          theme={{
+            //Fix this to what the rest of the styling is later
+            primaryColor: '#A9A9A9'
+          }}
+        >
+        <Navbar />
+        </ReactiveBase>
+        <Main />
+        <Footer />
       </div>
     )
   }
