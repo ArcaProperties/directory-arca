@@ -10,6 +10,7 @@ var HomesList = ({ list, selectHome }) => {
           <Home selectHome={selectHome} home={home} />
         )
       }
+      Here is a random file change.
     </div>
   )
 }
