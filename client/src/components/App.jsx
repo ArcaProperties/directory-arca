@@ -1,5 +1,6 @@
 import React from 'react';
-import HomesList from './HomesList.jsx'
+import HomesList from './HomesList.jsx';
+import { ReactiveBase } from '@appbaseio/reactivesearch';
 
 class App extends React.Component {
   constructor(props){
@@ -26,10 +27,17 @@ class App extends React.Component {
 
   render(){
     return(
-      <div>
-        current home: { this.state.home }
-        <HomesList list={ this.state.listOfHomes} selectHome={ this.handleClick }/>
-      </div>
+      <section className="container">
+        <ReactiveBase
+          app="arca-housing-list"
+          credentials="gyt60WE3T:18fa7784-3c3b-45e5-a1c5-f54b2696506a"
+          type="listing"
+        ></ReactiveBase>
+      </section>
+      // <div>
+      //   current home: { this.state.home }
+      //   <HomesList list={ this.state.listOfHomes} selectHome={ this.handleClick }/>
+      // </div>
     )
   }
 }
