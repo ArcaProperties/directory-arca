@@ -1,0 +1,22 @@
+:local .UniCarousel {
+    border: 1px solid red;
+    text-align: center;
+  }
+
+:local .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+:local .container {
+  height: 25vh;
+}
+
+:local .background {
+  max-width:100%;
+  max-height:100%;
+}
+
