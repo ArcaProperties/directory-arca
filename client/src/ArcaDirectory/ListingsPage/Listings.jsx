@@ -2,6 +2,7 @@ import React from 'react';
 import { ReactiveBase, DataSearch, DateRange, NumberBox, DynamicRangeSlider, ResultCard} from '@appbaseio/reactivesearch';
 import navBar from '../NavBar.jsx';
 import styles from './styles/ListingsPage.css';
+import Navbar from '../NavBar.jsx';
 
 class Listings extends React.Component {
   constructor(props) {
@@ -22,7 +23,8 @@ class Listings extends React.Component {
             primaryColor: '#A9A9A9'
           }}
         >
-
+        {/* Nav bar goes here */}
+        <Navbar/>
         <DateRange
           componentId="DateRangeSensor"
           dataField="date_from"
