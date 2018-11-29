@@ -77,27 +77,27 @@ class Listings extends React.Component {
         />
 
         <ResultCard
+          className="right-col"
           componentId="ResultCard"
           dataField="name"
           pagination={true}
           paginationAt="bottom"
-          onData={
-            function(data){
-              return{
-                image: data.image,
-                title: data.name,
-                description: (
-                  <div>
-                    <div className="price">${data.price}</div>
-                    <p className="info_tag">{data.property_type} · {data.bedrooms} Bedrooms · {data.bathrooms} Bathrooms</p>
-                  </div>
-                ),
-                //later link this to the product page
-                url:data.listing_url
-          }}}
+          size={20}
+          onData={data=>({
+            image: data.image,
+            title: data.name,
+            description: (
+              <div>
+                <div className="price">${data.price}</div>
+                <p className="info_tag">{data.property_type} · {data.bedrooms} Bedrooms · {data.bathrooms} Bathrooms</p>
+              </div>
+            ),
+            //later link this to the product page
+            url:data.listing_url
+          })}
 
           react={{
-            and: ['DateRangeSensor', 'DynamicRangeSensor', 'BedroomBoxSensor', 'AccomodateBoxSensor', 'SearchSensor']
+            and: ['SearchSensor', 'search', 'DateRangeSensor', 'DynamicRangeSensor', 'BedroomBoxSensor', 'AccomodateBoxSensor']
           }}
 
           innerClass={{
