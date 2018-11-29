@@ -11,6 +11,9 @@ var HomesList = ({ list, selectHome }) => {
         )
       }
       Random Test for Git push
+
+      Here is a random file change.
+
     </div>
   )
 }
