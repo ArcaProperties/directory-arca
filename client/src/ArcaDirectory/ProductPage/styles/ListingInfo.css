@@ -1,5 +1,5 @@
-:local .PhotoGallery {
+:local .ListingInfo {
   border: 1px solid black;
-  padding: 10vh 0;
+  display: flex;
   text-align: center;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './../styles/Photogallery.css';
+import styles from './../styles/PhotoGallery.css';
 
-class Photogallery extends React.Component {
+class PhotoGallery extends React.Component {
   constructor( props ) {
     super( props );
     this.state = {}
@@ -9,11 +9,11 @@ class Photogallery extends React.Component {
 
   render() {
     return(
-      <div className={ styles.Photogallery }>
+      <div className={ styles.PhotoGallery }>
         This is the PhotoGallery.
       </div>
     )
   }
 }
 
-export default Photogallery;
+export default PhotoGallery;
