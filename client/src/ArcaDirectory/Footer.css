@@ -1,0 +1,6 @@
+:local .Footer {
+    border: 1px solid black;
+    padding: 3vw;
+    margin: 2vh 0 0;
+    text-align: center;
+  }
