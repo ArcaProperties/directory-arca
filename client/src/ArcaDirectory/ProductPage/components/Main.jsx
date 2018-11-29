@@ -1,5 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import styles from './../styles/Main.css';
+import Photogallery from './Photogallery.jsx';
 
 class Main extends React.Component {
   constructor(props) {
@@ -10,7 +12,8 @@ class Main extends React.Component {
   render() {
     return(
       <div className={ styles.Main }>
-        This is the Main.
+        <Photogallery />
+        This is the Main. <Link to='/'> Click me to go to Landing Page.</Link>
       </div>
     )
   }
