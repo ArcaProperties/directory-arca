@@ -34,10 +34,10 @@ class App extends React.Component {
           type="listing"
         ></ReactiveBase>
       </section>
-      // <div>
-      //   current home: { this.state.home }
-      //   <HomesList list={ this.state.listOfHomes} selectHome={ this.handleClick }/>
-      // </div>
+      <div>
+        current home: { this.state.home }
+        <HomesList list={ this.state.listOfHomes} selectHome={ this.handleClick }/>
+      </div>
     )
   }
 }
