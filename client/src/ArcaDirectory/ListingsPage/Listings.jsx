@@ -1,6 +1,5 @@
 import React from 'react';
-import { ReactiveBase } from '@appbaseio/reactivesearch';
-import { DataSearch } from '@appbaseio/reactivesearch';
+import { ReactiveBase, DataSearch, DateRange, NumberBox } from '@appbaseio/reactivesearch';
 import styles from './styles/ListingsPage.css';
 
 class Listings extends React.Component {
@@ -25,14 +24,23 @@ class Listings extends React.Component {
 
         <DateRange
           componentId="DateRangeSensor"
-          dateField="date_from"
+          dataField="date_from"
           title="Dates"
           numberOfMonths={2}
-          queryFormat="basic-date"
+          queryFormat="basic_date"
           initialMonth={new Date('12-01-2018')}
         />
 
-        
+        <NumberBox
+          componentId="NumberBoxSensor"
+          dataField="bedrooms"
+          defaultSelected={2}
+          label="left"
+          queryFormat="gte"
+          URLParams={false}
+          data={{"label":"Bedrooms", "start":1, "end":15}}
+        />
+
         </ReactiveBase>
       </div>
     )
