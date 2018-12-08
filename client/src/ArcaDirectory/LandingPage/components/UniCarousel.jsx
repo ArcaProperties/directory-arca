@@ -2,8 +2,19 @@ import React from 'react';
 import Carousel from 'nuka-carousel';
 import styles from './../styles/UniCarousel.css';
 import { Link } from 'react-router-dom'
+import classNames from 'classnames';
  
-const unis = ["Bocconi", "Naba", "Politecnico", "Catolica", "Brera", "Milano"];
+const unis = [
+  {name: "Bocconi", img: "aleximg/uni-01.jpg"},
+  {name: "Naba", img: "aleximg/uni-02.jpg"},
+  {name: "Politecnico", img: "aleximg/uni-03.jpg"},
+  {name: "Catolica", img: "aleximg/uni-04.jpg"},
+  {name: "Brera", img: "aleximg/uni-05.jpg"},
+  {name: "Milano", img: "aleximg/uni-06.jpg"},
+  {name: "Universita", img: "aleximg/uni-07.jpg"},
+  {name: "Torino", img: "aleximg/uni-08.jpg"},
+  {name: "Venezia", img: "aleximg/uni-09.jpg"},
+];
 
 export default class UniCarousel extends React.Component {
   constructor(props) {
@@ -22,13 +33,20 @@ export default class UniCarousel extends React.Component {
     var renderedOutput = unis.map(uni => 
       <Link to="/listings">
       <div onClick={() => this.handleClick(uni)} className={ styles.container }>
-        <img className={ styles.background }src="https://images.unsplash.com/photo-1513581166391-887a96ddeafd?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d444ded281ab624819b6e13a5c048450&auto=format&fit=crop&w=1950&q=80"/>
-        <div className={ styles.centered } >{uni}</div>
+        <img className={ styles.background } src={uni.img}/>
+        <div className={ styles.centered } >{uni.name}</div>
       </div>
       </Link>)
 
     return (
-      <Carousel slidesToShow={5}
+      <Carousel slidesToShow={5} wrapAround={true} cellSpacing={10}
+        renderBottomCenterControls={() => {}}
+        renderCenterLeftControls={({ previousSlide }) => (
+          <button className={classNames({[styles.testimonials__arrow]: true, [styles.testimonials__arrow__left]: true, [styles.testimonials__arrow__05]: true, [styles.testimonials__arrow__05__left]: true})} onClick={previousSlide}></button>
+        )}
+        renderCenterRightControls={({ nextSlide }) => (
+          <button className={classNames({[styles.testimonials__arrow]: true, [styles.testimonials__arrow__right]: true, [styles.testimonials__arrow__05]: true, [styles.testimonials__arrow__05__right]: true})} onClick={nextSlide}></button>
+        )}
       >
         {renderedOutput}
       </Carousel>
