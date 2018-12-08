@@ -12,6 +12,7 @@ class Main extends React.Component {
   render() {
     return(
       <div className={ styles.Main }>
+        <div className={ styles.about__title }>Find your university</div>
         <UniCarousel />
       </div>
     )
