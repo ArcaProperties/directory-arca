@@ -3,6 +3,7 @@ import styles from './Navbar.css';
 import { Redirect } from 'react-router'
 import { ReactiveBase, DataSearch} from '@appbaseio/reactivesearch'
 
+
 class Navbar extends React.Component {
   constructor(props) {
     super(props)
@@ -27,8 +28,11 @@ class Navbar extends React.Component {
     } 
  
     return(
-      <nav className="nav">
-        <div className="title"> ArcaSearch </div>
+      <nav className="nav" className={ styles.Navbar }>
+        <div className={ styles.title }> 
+          <img src="img/arca-logo-black.png" className={styles.titleicon}></img>
+        </div>
+
         <DataSearch
           componentId="SearchSensor"
           dataField="name"
@@ -36,8 +40,9 @@ class Navbar extends React.Component {
           autosuggest={true}
           URLParams={true}
           iconPosition="left"
-          className="search"
+          className= {styles.search}
           onValueSelected={ (value, cause, source) => this.handleSearch(value)}
+          
         />
       </nav>
     )

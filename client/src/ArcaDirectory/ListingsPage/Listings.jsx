@@ -1,19 +1,10 @@
 import React from 'react';
 import { ReactiveBase, DataSearch, DateRange, NumberBox, DynamicRangeSlider, ResultCard} from '@appbaseio/reactivesearch';
-import navBar from '../NavBar.jsx';
 import styles from './styles/ListingsPage.css';
 import Navbar from '../NavBar.jsx';
 
-class Listings extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-
-    }
-  }
-  render() {
-    return(
-      <div className="container">
+export default() => (
+      <div className="container" >
         <ReactiveBase
           app="arca-housing-list"
           credentials="gyt60WE3T:18fa7784-3c3b-45e5-a1c5-f54b2696506a"
@@ -25,7 +16,7 @@ class Listings extends React.Component {
         >
         <Navbar/>
 
-        <div className="left-col">
+        <div className={styles.leftcol} >
           <DateRange
             componentId="DateRangeSensor"
             dataField="date_from"
@@ -52,7 +43,7 @@ class Listings extends React.Component {
                 "end": "$" + max
               }
             )}
-            stepValue={1}
+            stepValue={5}
             showHistogram={true}
             showFilter={true}
             URLParams={false}
@@ -80,7 +71,7 @@ class Listings extends React.Component {
         </div>
         
         <ResultCard
-          className="right-col"
+          className={styles.rightcol}
           componentId="ResultCard"
           dataField="name"
           pagination={true}
@@ -103,17 +94,13 @@ class Listings extends React.Component {
             and: ['SearchSensor', 'search', 'DateRangeSensor', 'DynamicRangeSensor', 'BedroomBoxSensor', 'AccommodateBoxSensor']
           }}
 
-          // innerClass={{
-          //   resultStats: 'result-stats',
-          //   list: 'list',
-          //   listItem: 'list-item',
-          //   image: 'image',
-          // }}
+          innerClass={{
+            resultStats: 'resultStats',
+            list: 'results',
+            listItem: 'resultItem',
+            image: 'image',
+          }}
         />
         </ReactiveBase>
       </div>
-    )
-  }
-}
-
-export default Listings;
+    );
