@@ -26,6 +26,7 @@ class Product extends React.Component {
         >
         <Navbar />
         </ReactiveBase>
+        
         <Main />
         <Footer />
       </div>

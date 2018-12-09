@@ -1,5 +1,13 @@
+html, body{
+  margin:0;
+  padding:0;
+}
+
 :local .Main {
   border: 1px solid black;
-  margin: 2vh 0;
+  margin-left:2vh;
+  margin-right:2vh;
+  margin-bottom:2vh;
+  padding-top:76px;
   text-align: center;
 }

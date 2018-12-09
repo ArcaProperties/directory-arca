@@ -1,5 +1,6 @@
 import React from 'react';
-import { ReactiveBase, DataSearch, DateRange, NumberBox, DynamicRangeSlider, ResultCard} from '@appbaseio/reactivesearch';
+import { Link } from 'react-router-dom';
+import {ReactiveBase, DateRange, NumberBox, DynamicRangeSlider, ResultCard, ResultList} from '@appbaseio/reactivesearch';
 import styles from './styles/ListingsPage.css';
 import Navbar from '../NavBar.jsx';
 
@@ -11,11 +12,11 @@ export default() => (
           type="listing"
           theme={{
             //Fix this to what the rest of the styling is later
-            primaryColor: '#A9A9A9'
+            primaryColor: '#A9A9A9',
           }}
+          
         >
         <Navbar/>
-
         <div className={styles.leftcol} >
           <DateRange
             componentId="DateRangeSensor"
@@ -69,14 +70,28 @@ export default() => (
             data={{"label":"Accommodates", "start":1, "end":15}}
           />
         </div>
-        
+        {/* <Link to={{pathname:'/product', state: {
+          image: data.image,
+          title: data.name,
+          price: data.price,
+          property_type: data.property_type,
+          num_bedrooms: data.bedrooms,
+          num_bathrooms: data.bathrooms,
+          bed_type: data.bed_type,
+          accomodates: data.accomodates,
+          host_image: data.host_image,
+          host_name: data.host_name,
+          room_type: data.room_type
+        } 
+        }}> */}
         <ResultCard
           className={styles.rightcol}
           componentId="ResultCard"
           dataField="name"
           pagination={true}
           paginationAt="bottom"
-          size={20}
+          size={18}
+          
           onData={data=>({
             image: data.image,
             title: data.name,
@@ -89,18 +104,19 @@ export default() => (
             //later link this to the product page
             url:"localhost:7777/#/product"
           })}
-
+          
           react={{
             and: ['SearchSensor', 'search', 'DateRangeSensor', 'DynamicRangeSensor', 'BedroomBoxSensor', 'AccommodateBoxSensor']
           }}
-
+          
           innerClass={{
-            resultStats: 'resultStats',
-            list: 'results',
-            listItem: 'resultItem',
-            image: 'image',
-          }}
+            resultStats: styles.resultStats,
+            list: styles.list,
+            listItem: styles.listItem,
+            image: styles.image,
+          }} 
         />
+        {/* </Link> */}
         </ReactiveBase>
       </div>
     );

@@ -4,6 +4,7 @@ import styles from './../styles/Main.css';
 import PhotoGallery from './PhotoGallery.jsx';
 import ListingInfo from './ListingInfo.jsx';
 
+{/* <Route path='/:handle' component={ListingInfo}/> */}
 class Main extends React.Component {
   constructor(props) {
     super(props)
