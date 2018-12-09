@@ -20,12 +20,31 @@ export default class UniCarousel extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      slidesToShow: 5,
+      width: props.width,
+      slidesToShow: 4,
     }
   }
 
   handleClick(value) {
     console.log('handleClick: ', value);
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      window.dispatchEvent(new Event('resize'));
+    }, 0);
+  }
+
+  componentWillMount(){
+    if (window.innerWidth > 1000) { 
+      this.setState({slidesToShow: 4});
+    }
+    else if (window.innerWidth > 700) {
+      this.setState({slidesToShow: 3});
+    }
+    else {
+      this.setState({slidesToShow: 2});
+    }
   }
 
   render() {
@@ -39,17 +58,19 @@ export default class UniCarousel extends React.Component {
       </Link>)
 
     return (
-      <Carousel slidesToShow={5} wrapAround={true} cellSpacing={10}
-        renderBottomCenterControls={() => {}}
-        renderCenterLeftControls={({ previousSlide }) => (
-          <button className={classNames({[styles.testimonials__arrow]: true, [styles.testimonials__arrow__left]: true, [styles.testimonials__arrow__05]: true, [styles.testimonials__arrow__05__left]: true})} onClick={previousSlide}></button>
-        )}
-        renderCenterRightControls={({ nextSlide }) => (
-          <button className={classNames({[styles.testimonials__arrow]: true, [styles.testimonials__arrow__right]: true, [styles.testimonials__arrow__05]: true, [styles.testimonials__arrow__05__right]: true})} onClick={nextSlide}></button>
-        )}
-      >
-        {renderedOutput}
-      </Carousel>
+      <div >
+        <Carousel slidesToShow={this.state.slidesToShow} wrapAround={true} cellSpacing={10}
+          renderBottomCenterControls={() => {}}
+          renderCenterLeftControls={({ previousSlide }) => (
+            <button className={classNames({[styles.testimonials__arrow]: true, [styles.testimonials__arrow__left]: true, [styles.testimonials__arrow__05]: true, [styles.testimonials__arrow__05__left]: true})} onClick={previousSlide}></button>
+          )}
+          renderCenterRightControls={({ nextSlide }) => (
+            <button className={classNames({[styles.testimonials__arrow]: true, [styles.testimonials__arrow__right]: true, [styles.testimonials__arrow__05]: true, [styles.testimonials__arrow__05__right]: true})} onClick={nextSlide}></button>
+          )}
+        >
+          {renderedOutput}
+        </Carousel>
+      </div>
     );
   }
 }
