@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from './Navbar.css';
 import { Redirect } from 'react-router'
-import { ReactiveBase, DataSearch} from '@appbaseio/reactivesearch'
+import { Link } from 'react-router-dom'
+import { DataSearch} from '@appbaseio/reactivesearch'
 
 
 class Navbar extends React.Component {
@@ -30,7 +31,7 @@ class Navbar extends React.Component {
     return(
       <nav className="nav" className={ styles.Navbar }>
         <div className={ styles.title }> 
-          <img src="img/arca-logo-black.png" className={styles.titleicon}></img>
+        <Link to='/'><img src="img/arca-logo-black.png" className={styles.titleicon}></img></Link>
         </div>
 
         <DataSearch

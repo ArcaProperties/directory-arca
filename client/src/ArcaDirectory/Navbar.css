@@ -9,11 +9,14 @@ html,body{
   padding: 0 24px;
   height: 64px;
   border-bottom: 1px solid lightgrey;
+  background-color:white;
   width: 100%;
   justify-content: flex-start;
   text-align: left;
   align-items:center;
   color: black;
+  position: fixed;
+  z-index: 1;
   /* background-color: rgba(17, 17, 252, 0.384); */
 }
 
