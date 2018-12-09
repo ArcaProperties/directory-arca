@@ -7,7 +7,7 @@
     padding-left: 1%;
     padding-right: 1%;
     border-right: 1px solid lightgrey;
-    top:64px;
+    padding-top:64px;
 }
 :local .leftcol > div{
     margin: 10px 0;

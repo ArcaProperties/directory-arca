@@ -6,8 +6,8 @@ import ListingInfoPanel from './ListingInfoPanel.jsx';
 var ListingInfo = (props) => {
   return(
     <div className={ styles.ListingInfo }>
-      <ListingInfoDetails />
-      <ListingInfoPanel />
+      <ListingInfoDetails data={props.data} />
+      <ListingInfoPanel data={props.data}/>
     </div>
   )
 }

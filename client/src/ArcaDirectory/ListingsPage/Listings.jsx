@@ -70,6 +70,7 @@ export default() => (
             data={{"label":"Accommodates", "start":1, "end":15}}
           />
         </div>
+
         {/* <Link to={{pathname:'/product', state: {
           image: data.image,
           title: data.name,
@@ -96,19 +97,54 @@ export default() => (
             image: data.image,
             title: data.name,
             description: (
+              <Link to={{pathname:'/product', state: {
+                image: data.image,
+                title: data.name,
+                price: data.price,
+                property_type: data.property_type,
+                num_bedrooms: data.bedrooms,
+                num_bathrooms: data.bathrooms,
+                bed_type: data.bed_type,
+                accomodates: data.accomodates,
+                host_image: data.host_image,
+                host_name: data.host_name,
+                room_type: data.room_type
+              } 
+              }}>
               <div>
                 <div className="price">${data.price}/day</div>
                 <p className="info_tag">{data.property_type} · {data.bedrooms} Bedrooms · {data.bathrooms} Baths</p>
               </div>
+              </Link>
             ),
             //later link this to the product page
-            url:"localhost:7777/#/product"
+            //url:"localhost:7777/#/product"
+            
+            
+            // containerProps: {
+            //   onClick: ()=> <Link to={{pathname:'/product', state: {
+            //     image: data.image,
+            //     title: data.name,
+            //     price: data.price,
+            //     property_type: data.property_type,
+            //     num_bedrooms: data.bedrooms,
+            //     num_bathrooms: data.bathrooms,
+            //     bed_type: data.bed_type,
+            //     accomodates: data.accomodates,
+            //     host_image: data.host_image,
+            //     host_name: data.host_name,
+            //     room_type: data.room_type
+            //   } 
+            //   }}></Link>
+            // }
+ 
+
           })}
           
           react={{
             and: ['SearchSensor', 'search', 'DateRangeSensor', 'DynamicRangeSensor', 'BedroomBoxSensor', 'AccommodateBoxSensor']
           }}
-          
+
           innerClass={{
             resultStats: styles.resultStats,
             list: styles.list,

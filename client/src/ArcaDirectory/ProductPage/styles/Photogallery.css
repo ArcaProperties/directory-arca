@@ -3,3 +3,8 @@
   padding: 10vh 0;
   text-align: center;
 }
+
+:local .imageGallery{
+  width: 100%;
+  height: auto;
+}

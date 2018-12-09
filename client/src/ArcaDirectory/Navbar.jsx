@@ -45,6 +45,9 @@ class Navbar extends React.Component {
           onValueSelected={ (value, cause, source) => this.handleSearch(value)}
           
         />
+        <div className={styles.about}>
+          <a href="http://www.arcaproperties.co/about">About</a>
+        </div>
       </nav>
     )
   }
