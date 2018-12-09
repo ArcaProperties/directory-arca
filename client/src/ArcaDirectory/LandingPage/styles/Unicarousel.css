@@ -21,6 +21,10 @@
   max-height:100%;
 }
 
+:local .carouselContainer {
+  padding: 1vw;
+}
+
 :local .testimonials__arrow {
   position: absolute;
   -webkit-border-radius: 50%;
