@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './../styles/PhotoGallery.css';
 import ImageGallery from 'react-image-gallery';
-//import styles from "../../../../../node_modules/react-image-gallery/styles/css/image-gallery.css";
+import "../../../../../node_modules/react-image-gallery/styles/css/image-gallery.css";
 
 class PhotoGallery extends React.Component {
   constructor( props ) {
@@ -27,7 +27,9 @@ class PhotoGallery extends React.Component {
     return(
       <div className={ styles.PhotoGallery }>
         This is the PhotoGallery.
-        {/* <ImageGallery items={images} /> */}
+        <div className={ styles.imageGallery }>
+          <ImageGallery items={images} />
+        </div>
       </div>
     )
   }

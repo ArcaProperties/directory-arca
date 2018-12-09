@@ -35,3 +35,22 @@ html,body{
   width: auto;
   overflow:auto;
 }
+
+:local .about{
+  vertical-align:middle;
+  text-align: right;
+  width: 50%;
+  font-weight: bold;
+  color:black;
+}
+
+a:link{
+  text-decoration: none;
+  color:black;
+}
+a:visited{
+  color:black;
+}
+a:hover{
+  color:black;
+}

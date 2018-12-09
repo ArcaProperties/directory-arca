@@ -1,7 +1,7 @@
 :local .Main {
-    margin-left: 2vh 0;
-    margin-right: 2vh 0;
-    margin-bottom: 2vh 0;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    padding-bottom: 2vh;
     padding-top: 85px;
     text-align: center;
   }
