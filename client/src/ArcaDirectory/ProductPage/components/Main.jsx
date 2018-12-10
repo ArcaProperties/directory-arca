@@ -14,7 +14,7 @@ class Main extends React.Component {
   render() {
     return(
       <div className={ styles.Main }>
-        <PhotoGallery />
+        <PhotoGallery data={this.props.data}/>
         <ListingInfo data={this.props.data}/>
         {/* This is the Main. <Link to='/'> Click me to go to Landing Page.</Link> */}
       </div>
