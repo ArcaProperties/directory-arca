@@ -1,7 +1,61 @@
 :local .ListingInfoDetails {
-  width: 60%;
-  border: 1px solid black;
-  padding: 60vh 0;
-  margin: 5vmin;
-  text-align: center;
+  width: 70%;
+  padding-top: 0;
+  margin-left: 5vmin;
+  margin-right: 5vmin;
+  text-align: left;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+:local .title{
+  margin-bottom:0;
+}
+:local .ListingInfoDetails p{
+  margin-top:2%;
+}
+:local .subtitle{
+  margin-top: 0;
+  margin-bottom: 1%;
+  font-style:italic;
+  font-weight:normal;
+}
+:local .location{
+  height:600px;
+}
+:local .about{
+  margin-top:5%;
+}
+:local .ListingInfoDetails h2{
+  font-size: 20px;
+  font-weight: 450;
+}
+:local .ListingInfoDetails > div{
+  border-bottom: 1px solid lightgrey;
+}
+
+:local .hostHeader{
+  width:50%;
+  padding-left:0;
+  padding-right:0; 
+  margin-right:0; 
+
+}
+:local .owner{
+  display:inline-block;
+  width:100%;
+}
+:local .owner img{
+  float:right;
+  width: 35%;
+  border-radius:50%;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  margin-left: 2%;
+} 
+
+:local .owner img:after{
+  clear: both;
+  content: "";
+  display: inline-block;
+} 
+

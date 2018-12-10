@@ -1,10 +1,46 @@
 :local .ListingInfoPanel {
-  width: 40%;
-  height: 10vh;
-  border: 1px solid black;
-  padding: 20vh 0;
+  width: 30%;
+  height: 30vh;
+  border: 1px solid lightgrey;
+  padding: 2%;
   margin: 5vmin;
-  text-align: center;
+  text-align: left;
   position: sticky;
-  top: 0;
+  top: 96px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:local .ListingInfoPanel h2{
+  margin-top: 1%;
+  margin-bottom: 3.5%;
+  font-size: 16px;
+  font-weight: 400;
+  color:black;
+}
+
+:local .ListingInfoPanel p{
+  margin-top: 1%;
+  margin-bottom: 1%;
+  font-size:12px;
+}
+:local .price{
+  font-size: 24px;
+  padding-right: 2%;
+}
+
+:local .listingActionItems{
+  margin-top: 3.5%;
+}
+
+:local .button{
+  margin-bottom: 0px;
+  border-radius: 4px;
+  line-height: 10px;
+  font-weight: 400;
+  background-color: blue;
+  color: white
+}
+
+:local .buttonContent{
+
 }

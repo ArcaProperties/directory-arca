@@ -14,26 +14,7 @@ class Product extends React.Component {
     }
   }
 
-  
-
   render() {
-    // const Appbase = require("appbase-js");
-
-    // const appbaseRef=Appbase({
-    //   url: "https://scalr.api.appbase.io",
-    //   app:"arca-housing-list",
-    //   credentials:"gyt60WE3T:18fa7784-3c3b-45e5-a1c5-f54b2696506a",
-    // })
-
-    // appbaseRef.get({
-    //   type: "listing",
-    //   id: "AVsUianLtBk7_I4P_XI4"
-    // }).then(response => {
-    //   console.log("Success: ", JSON.stringify(response, null, '\t'));
-    // }).catch(error => {
-    //   console.log("Error: ", error);
-    // });
-    console.log(this.props.location.state)
     return(
       <div>
         <ReactiveBase

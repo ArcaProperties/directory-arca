@@ -34,6 +34,17 @@
     background-size:cover;
 }
 
+:local .rightcol a:link{
+    text-decoration: none;
+    color:black;
+}
+:local .rightcol a:visited{
+    color:black;
+}
+:local .rightcol a:hover{
+    color:black;
+} 
+
 :local .resultStats{
     text-align:right;
 }
