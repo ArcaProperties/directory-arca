@@ -19,7 +19,9 @@
   font-style:italic;
   font-weight:normal;
 }
-
+:local .location{
+  height:600px;
+}
 :local .about{
   margin-top:5%;
 }
