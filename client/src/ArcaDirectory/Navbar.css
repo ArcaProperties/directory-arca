@@ -25,6 +25,10 @@ html,body{
   width: 50%;
 }
 
+:local .input{
+  border-radius: 12px;
+}
+
 :local .title{
   align-content: center;  
 }

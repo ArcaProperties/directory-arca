@@ -14,7 +14,6 @@ export default() => (
             //Fix this to what the rest of the styling is later
             primaryColor: '#A9A9A9',
           }}
-          
         >
         <Navbar/>
         <div className={styles.leftcol} >
