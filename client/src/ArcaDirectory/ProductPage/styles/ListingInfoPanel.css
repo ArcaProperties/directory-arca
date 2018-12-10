@@ -1,6 +1,6 @@
 :local .ListingInfoPanel {
   width: 30%;
-  height: 30vh;
+  height: 35vh;
   border: 1px solid lightgrey;
   padding: 2%;
   margin: 5vmin;
@@ -34,13 +34,23 @@
 
 :local .button{
   margin-bottom: 0px;
-  border-radius: 4px;
-  line-height: 10px;
-  font-weight: 400;
-  background-color: blue;
-  color: white
+    font-size: 16px;
+    border-radius: 4px;
+    margin-top: 5%;
+    padding: 4%;
+    text-align: center;
+    font-weight: 500;
+    background-color: #e6b980;
+    color: white;
 }
 
-:local .buttonContent{
-
+:local .listingActionItems a:link{
+  text-decoration: none;
+  color:white;
+}
+:local .listingActionItems a:visited{
+  color:white;
+}
+:local .listingActionItems a:hover{
+  color:white;
 }

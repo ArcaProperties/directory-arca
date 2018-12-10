@@ -1,10 +1,10 @@
 import React from 'react';
-// import {ReactiveBase, ReactiveMap} from '@appbaseio/reactivesearch'
+import {ReactiveBase, ReactiveMap} from '@appbaseio/reactivesearch'
 import styles from './../styles/ListingInfoDetails.css';
 import 'mapbox-gl/dist/mapbox-gl.css'
-import ReactMapGL, {Marker} from 'react-map-gl';
+// import ReactMapGL, {Marker} from 'react-map-gl';
 
-const TOKEN = 'pk.eyJ1IjoiZGF2aWRsZWU1MDAiLCJhIjoiY2pwaG5vN3Y3MHliYTN2b2J1MThkajZ5NCJ9.6FTd4cecdYRsWYrsn4y2zQ'
+// const TOKEN = 'pk.eyJ1IjoiZGF2aWRsZWU1MDAiLCJhIjoiY2pwaG5vN3Y3MHliYTN2b2J1MThkajZ5NCJ9.6FTd4cecdYRsWYrsn4y2zQ'
 
 var ListingInfoDetails = (props) => {
   return(
@@ -28,6 +28,18 @@ var ListingInfoDetails = (props) => {
 
       <div className = {styles.location}>
         <h2>Location</h2>
+        {/* <div className="container" > */}
+        {/* <ReactiveBase
+          app="arca-housing-list"
+          credentials="gyt60WE3T:18fa7784-3c3b-45e5-a1c5-f54b2696506a"
+          type="listing"
+          theme={{
+            //Fix this to what the rest of the styling is later
+            primaryColor: '#A9A9A9',
+          }}
+        > */}
+
+        
         {/* <ReactMapGL 
           width="100%"
           height="100%"
