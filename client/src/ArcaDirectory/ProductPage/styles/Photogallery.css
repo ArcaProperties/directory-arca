@@ -1,10 +1,8 @@
 :local .PhotoGallery {
-  border: 1px solid black;
-  padding: 10vh 0;
   text-align: center;
 }
 
-:local .imageGallery{
+:local .image{
+  background-size: cover;
   width: 100%;
-  height: auto;
 }

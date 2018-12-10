@@ -1,8 +1,8 @@
 import React from 'react';
 // import {ReactiveBase, ReactiveMap} from '@appbaseio/reactivesearch'
+import MapContainer from './Map.jsx';
 import styles from './../styles/ListingInfoDetails.css';
 import 'mapbox-gl/dist/mapbox-gl.css'
-import ReactMapGL, {Marker} from 'react-map-gl';
 
 const TOKEN = 'pk.eyJ1IjoiZGF2aWRsZWU1MDAiLCJhIjoiY2pwaG5vN3Y3MHliYTN2b2J1MThkajZ5NCJ9.6FTd4cecdYRsWYrsn4y2zQ'
 
@@ -28,18 +28,7 @@ var ListingInfoDetails = (props) => {
 
       <div className = {styles.location}>
         <h2>Location</h2>
-        {/* <ReactMapGL 
-          width="100%"
-          height="100%"
-          latitude={props.data.lat} 
-          longitude={props.data.lon} 
-          zoom={8} 
-          mapStyle="mapbox://styles/mapbox/dark-v9"
-          mapboxApiAccessToken={TOKEN} >
-          <Marker latitude={props.data.lat} longitude={props.data.lon} offsetLeft={-20} offsetTop={-10}>
-            <div>Property Location</div>
-          </Marker>
-        </ReactMapGL> */}
+        <MapContainer />
       </div>
 
       <div className = {styles.owner}>
