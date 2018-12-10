@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {ReactiveBase, DateRange, NumberBox, DynamicRangeSlider, ResultCard, ResultList} from '@appbaseio/reactivesearch';
+import {ReactiveBase, DateRange, NumberBox, DynamicRangeSlider, ResultCard} from '@appbaseio/reactivesearch';
 import styles from './styles/ListingsPage.css';
 import Navbar from '../NavBar.jsx';
 
@@ -24,7 +24,7 @@ export default() => (
             title="Dates"
             numberOfMonths={2}
             queryFormat="basic_date"
-            initialMonth={new Date('12-01-2018')}
+            initialMonth={new Date('7-01-2017')}
             URLParams={false}
           />
 
@@ -71,20 +71,6 @@ export default() => (
           />
         </div>
 
-        {/* <Link to={{pathname:'/product', state: {
-          image: data.image,
-          title: data.name,
-          price: data.price,
-          property_type: data.property_type,
-          num_bedrooms: data.bedrooms,
-          num_bathrooms: data.bathrooms,
-          bed_type: data.bed_type,
-          accomodates: data.accomodates,
-          host_image: data.host_image,
-          host_name: data.host_name,
-          room_type: data.room_type
-        } 
-        }}> */}
         <ResultCard
           className={styles.rightcol}
           componentId="ResultCard"
@@ -99,45 +85,26 @@ export default() => (
             description: (
               <Link to={{pathname:'/product', state: {
                 image: data.image,
-                title: data.name,
+                name: data.name,
                 price: data.price,
                 property_type: data.property_type,
-                num_bedrooms: data.bedrooms,
-                num_bathrooms: data.bathrooms,
+                bedrooms: data.bedrooms,
+                bathrooms: data.bathrooms,
                 bed_type: data.bed_type,
-                accomodates: data.accomodates,
+                accommodates: data.accommodates,
                 host_image: data.host_image,
                 host_name: data.host_name,
-                room_type: data.room_type
-              } 
+                room_type: data.room_type,
+                lat: data.location.lat,
+                lon: data.location.lon
+              }
               }}>
               <div>
-                <div className="price">${data.price}/day</div>
+                <div className="price">${data.price*30}/month</div>
                 <p className="info_tag">{data.property_type} · {data.bedrooms} Bedrooms · {data.bathrooms} Baths</p>
               </div>
               </Link>
             ),
-            //later link this to the product page
-            //url:"localhost:7777/#/product"
-            
-            
-            // containerProps: {
-            //   onClick: ()=> <Link to={{pathname:'/product', state: {
-            //     image: data.image,
-            //     title: data.name,
-            //     price: data.price,
-            //     property_type: data.property_type,
-            //     num_bedrooms: data.bedrooms,
-            //     num_bathrooms: data.bathrooms,
-            //     bed_type: data.bed_type,
-            //     accomodates: data.accomodates,
-            //     host_image: data.host_image,
-            //     host_name: data.host_name,
-            //     room_type: data.room_type
-            //   } 
-            //   }}></Link>
-            // }
- 
 
           })}
           
@@ -152,7 +119,6 @@ export default() => (
             image: styles.image,
           }} 
         />
-        {/* </Link> */}
         </ReactiveBase>
       </div>
     );
