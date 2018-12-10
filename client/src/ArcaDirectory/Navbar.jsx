@@ -44,6 +44,9 @@ class Navbar extends React.Component {
           className= {styles.search}
           onValueSelected={ (value, cause, source) => this.handleSearch(value)}
           
+          innerClass={{
+            input: styles.input
+          }}
         />
         <div className={styles.about}>
           <a href="http://www.arcaproperties.co/about">About</a>

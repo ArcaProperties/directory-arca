@@ -1,10 +1,11 @@
 import React from 'react';
+
 // import {ReactiveBase, ReactiveMap} from '@appbaseio/reactivesearch'
 import MapContainer from './Map.jsx';
 import styles from './../styles/ListingInfoDetails.css';
 import 'mapbox-gl/dist/mapbox-gl.css'
 
-const TOKEN = 'pk.eyJ1IjoiZGF2aWRsZWU1MDAiLCJhIjoiY2pwaG5vN3Y3MHliYTN2b2J1MThkajZ5NCJ9.6FTd4cecdYRsWYrsn4y2zQ'
+// const TOKEN = 'pk.eyJ1IjoiZGF2aWRsZWU1MDAiLCJhIjoiY2pwaG5vN3Y3MHliYTN2b2J1MThkajZ5NCJ9.6FTd4cecdYRsWYrsn4y2zQ'
 
 var ListingInfoDetails = (props) => {
   return(

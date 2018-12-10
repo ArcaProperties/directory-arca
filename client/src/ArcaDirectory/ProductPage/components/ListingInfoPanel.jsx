@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './../styles/ListingInfoPanel.css';
 import { ReactiveBase, DateRange } from '@appbaseio/reactivesearch'
 
+
 var ListingInfoPanel = (props) => {
   return(
     <div className={ styles.ListingInfoPanel }>
@@ -23,15 +24,19 @@ var ListingInfoPanel = (props) => {
             className={ styles.dateRange }
             componentId="DateRangeSensor"
             dataField="date_from"
-            title="Dates"
+            title="Dates" 
             numberOfMonths={1}
             queryFormat="basic_date"
             initialMonth={new Date('7-01-2017')}
             URLParams={false}
           />
         </ReactiveBase>
-
-        <button type="button" className={ styles.button }><span className={styles.buttonContent}>Request more information</span></button>
+        
+        <a href="https://alex4303.typeform.com/to/rxuueF">
+          <div className={ styles.button }>
+              Request more information
+          </div>
+        </a>
       </div>
     </div>
   )
