@@ -44,13 +44,13 @@ html,body{
   color:black;
 }
 
-a:link{
+:local .about a:link{
   text-decoration: none;
   color:black;
 }
-a:visited{
+:local .about a:visited{
   color:black;
 }
-a:hover{
+:local .about a:hover{
   color:black;
 }
