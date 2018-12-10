@@ -3,8 +3,10 @@ import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 import styles from './../styles/Main.css';
 
 export class MapContainer extends Component {
-    
-    
+    constructor(props) {
+        super(props)
+        this.state = {}
+    }
 
     render() {
         const style = {
@@ -18,12 +20,15 @@ export class MapContainer extends Component {
             google={this.props.google}
             style={style}
             initialCenter={{
-            lat: 40.854885,
-            lng: -88.081807
+            lat: this.props.data.lat,
+            lng: this.props.data.lon
             }}
             zoom={15}
             onClick={this.onMapClicked}
         >
+        <Marker
+            position={{lat: this.props.data.lat, lng: this.props.data.lon}} />
+        <Marker />
         </Map>
       );
     }

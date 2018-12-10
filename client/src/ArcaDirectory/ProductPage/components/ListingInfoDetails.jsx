@@ -29,7 +29,7 @@ var ListingInfoDetails = (props) => {
 
       <div className = {styles.location}>
         <h2>Location</h2>
-        <MapContainer />
+        <MapContainer data={props.data}/>
       </div>
 
       <div className = {styles.owner}>
