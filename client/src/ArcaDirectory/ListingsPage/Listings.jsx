@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import {ReactiveBase, DateRange, NumberBox, DynamicRangeSlider, ResultCard} from '@appbaseio/reactivesearch';
 import styles from './styles/ListingsPage.css';
-import Navbar from '../NavBar.jsx';
+import Navbar from '../Navbar.jsx';
 
 export default() => (
       <div className="container" >
