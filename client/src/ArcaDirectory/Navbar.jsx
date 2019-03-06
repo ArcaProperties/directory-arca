@@ -48,9 +48,6 @@ class Navbar extends React.Component {
             input: styles.input
           }}
         />
-        <div className={styles.about}>
-          <a href="http://www.arcaproperties.co/about">About</a>
-        </div>
       </nav>
     )
   }
